@@ -23,6 +23,60 @@ warnings.filterwarnings("ignore")
 
 PROC = pathlib.Path(__file__).parent.parent / "data" / "processed"
 
+N_BOOT = 10_000
+BOOT_SEED = 42
+
+
+def _boot_overall(df, n_boot=N_BOOT, seed=BOOT_SEED):
+    """Group-level bootstrap: 95% CI and p-value (H0: rate = 0.5) for overall rate."""
+    rng = np.random.default_rng(seed)
+    grp = df.groupby(["year", "group_name"])["transitive"].agg(["sum", "count"])
+    sums, counts = grp["sum"].to_numpy(float), grp["count"].to_numpy(float)
+    observed = sums.sum() / counts.sum()
+    n = len(grp)
+    idx = rng.integers(0, n, size=(n_boot, n))
+    boot = sums[idx].sum(1) / counts[idx].sum(1)
+    ci_lo, ci_hi = np.percentile(boot, [2.5, 97.5])
+    shifted = boot - boot.mean() + 0.5
+    p_val = float(np.mean(np.abs(shifted - 0.5) >= abs(observed - 0.5)))
+    return ci_lo, ci_hi, p_val
+
+
+def _boot_buckets(df, bins, labels, n_boot=N_BOOT, seed=BOOT_SEED):
+    """Group-level bootstrap: per-bucket 95% CIs and p-values (H0: rate = 0.5)."""
+    rng = np.random.default_rng(seed)
+    sub = df.dropna(subset=["rank_gap_ac"]).copy()
+    sub["rank_gap_ac"] = sub["rank_gap_ac"].astype(float)
+    sub["_bi"] = pd.cut(sub["rank_gap_ac"], bins=bins, labels=False)
+    sub = sub.dropna(subset=["_bi"])
+    sub["_bi"] = sub["_bi"].astype(int)
+    grp_keys = sub[["year", "group_name"]].drop_duplicates().reset_index(drop=True)
+    n_groups, n_b = len(grp_keys), len(labels)
+    g_sums = np.zeros((n_groups, n_b))
+    g_counts = np.zeros((n_groups, n_b))
+    for gi, (_, row) in enumerate(grp_keys.iterrows()):
+        chunk = sub[(sub["year"] == row["year"]) & (sub["group_name"] == row["group_name"])]
+        for bi in range(n_b):
+            t = chunk.loc[chunk["_bi"] == bi, "transitive"]
+            g_sums[gi, bi] = t.sum()
+            g_counts[gi, bi] = len(t)
+    idx = rng.integers(0, n_groups, size=(n_boot, n_groups))
+    boot_s = g_sums[idx].sum(1)
+    boot_c = g_counts[idx].sum(1)
+    with np.errstate(invalid="ignore", divide="ignore"):
+        boot_r = np.where(boot_c > 0, boot_s / boot_c, np.nan)
+    results = []
+    for bi, label in enumerate(labels):
+        obs = sub.loc[sub["_bi"] == bi, "transitive"]
+        obs_rate = obs.mean()
+        rates = boot_r[:, bi][~np.isnan(boot_r[:, bi])]
+        ci_lo, ci_hi = np.percentile(rates, [2.5, 97.5])
+        shifted = rates - rates.mean() + 0.5
+        p_val = float(np.mean(np.abs(shifted - 0.5) >= abs(obs_rate - 0.5)))
+        results.append({"label": label, "k": int(obs.sum()), "n": len(obs),
+                        "rate": obs_rate, "ci_lo": ci_lo, "ci_hi": ci_hi, "p_val": p_val})
+    return results
+
 
 def load_applicable():
     df = pd.read_csv(PROC / "transitivity_triples.csv")
@@ -41,18 +95,17 @@ def section(title):
 # Test 1: Overall binomial test
 # ---------------------------------------------------------------------------
 def test_overall(app):
-    section("TEST 1 — Overall transitivity rate (binomial test)")
+    section("TEST 1 — Overall transitivity rate (group-level bootstrap)")
     n = len(app)
     k = app["transitive"].sum()
     rate = k / n
-    result = stats.binomtest(k, n, p=0.5, alternative="two-sided")
+    ci_lo, ci_hi, p_val = _boot_overall(app)
     print(f"  Applicable triples : {n}")
     print(f"  Transitive         : {k}  ({100*rate:.1f}%)")
     print(f"  H0: p = 0.50 (chance)")
-    print(f"  p-value (two-sided): {result.pvalue:.4f}")
-    ci = result.proportion_ci(confidence_level=0.95)
-    print(f"  95% CI             : [{ci.low:.3f}, {ci.high:.3f}]")
-    if result.pvalue < 0.05:
+    print(f"  Bootstrap 95% CI   : [{ci_lo:.3f}, {ci_hi:.3f}]")
+    print(f"  Bootstrap p-value  : {p_val:.4f}  (n_boot={N_BOOT}, resampling groups)")
+    if p_val < 0.05:
         direction = "above" if rate > 0.5 else "below"
         print(f"  => Significant: transitivity rate is {direction} 0.5 (p < 0.05)")
     else:
@@ -106,16 +159,17 @@ def test_by_rank_gap(app):
     chi2, p, dof, _ = stats.chi2_contingency(contingency)
     print(f"\n  Chi-square across buckets: {chi2:.3f}  df={dof}  p={p:.4f}")
 
-    print("\n  Per-bucket binomial tests (H0: rate = 0.50, two-sided):")
+    print("\n  Per-bucket bootstrap tests (H0: rate = 0.50, group-level resampling):")
     print(f"  {'Bucket':<22} {'k':>4} {'n':>4}  {'rate':>5}  {'95% CI':<16}  p-value")
     print("  " + "-" * 62)
-    for bucket, row in tbl.iterrows():
-        k, n = int(row["transitive"]), int(row["total"])
-        res = stats.binomtest(k, n, p=0.5, alternative="two-sided")
-        ci = res.proportion_ci(confidence_level=0.95)
-        sig = " *" if res.pvalue < 0.05 else ""
-        print(f"  {str(bucket):<22} {k:>4} {n:>4}  {row['rate']:>5.3f}  "
-              f"[{ci.low:.3f}, {ci.high:.3f}]  {res.pvalue:.4f}{sig}")
+    bucket_results = _boot_buckets(
+        app, bins=[-200, -10, 10, 200],
+        labels=["A better (>=10)", "Similar (+-10)", "C better (>=10)"],
+    )
+    for r in bucket_results:
+        sig = " *" if r["p_val"] < 0.05 else ""
+        print(f"  {r['label']:<22} {r['k']:>4} {r['n']:>4}  {r['rate']:>5.3f}  "
+              f"[{r['ci_lo']:.3f}, {r['ci_hi']:.3f}]  {r['p_val']:.4f}{sig}")
     print("  (* p < 0.05 vs 50%)")
     return tbl, sub
 

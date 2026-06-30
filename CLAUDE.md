@@ -41,4 +41,6 @@ GitHub CSVs
 - `rank_gap_ac = rank_A − rank_C`. Negative values mean A is ranked higher (better). The logistic regression shows OR ≈ 0.968 per unit — transitivity is more likely when A is strongly favored by ranking.
 - FIFA ranking name → jfjelstul dataset name mismatches are resolved via `TEAM_NAME_MAP` in `02_process_data.py`. Adding tournaments beyond 2022 will require verifying this map.
 - `rank_gap_ac` equals `rank_gap_ab + rank_gap_bc` exactly (perfect collinearity), so the multivariate logit in `03_analysis.py` uses `rank_gap_ab + rank_gap_bc` as components instead.
+- CIs and p-values for the overall rate (Test 1) and per-bucket rates (Test 3) use **group-level bootstrap resampling** (`_boot_overall`, `_boot_buckets` in `03_analysis.py`; `_boot_bucket_ci` in `04_visualizations.py`), resampling the ~50 unique (year, group) pairs rather than individual triples. This accounts for within-group dependence. n=10,000 iterations, seed=42. Year-level chi-square (Test 2) still treats triples as independent.
 - Figure 4's network diagram (`04_visualizations.py`) hard-codes 2022 Group C as the illustrative group, with a fallback to 2018 Group F.
+- `REPO_URL` in `04_visualizations.py` is stamped onto all figures via `fig.text()`.

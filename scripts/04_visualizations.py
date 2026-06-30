@@ -25,6 +25,7 @@ FIG = pathlib.Path(__file__).parent.parent / "figures"
 FIG.mkdir(exist_ok=True)
 
 PALETTE = {"transitive": "#2196F3", "not_transitive": "#EF5350", "neutral": "#78909C"}
+REPO_URL = "https://github.com/ahmadi-analyst/fifa-transitivity"
 sns.set_theme(style="whitegrid", font_scale=1.1)
 
 
@@ -71,16 +72,53 @@ def fig_by_year(app):
                 f"{int(row['k'])}/{int(row['n'])}", ha="center", va="bottom",
                 fontsize=9, color="#333")
     ax.set_ylim(0, 1.05)
-    ax.set_xlabel("World Cup Year")
+    ax.set_xlabel("FIFA World Cup Year")
     ax.set_ylabel("Transitivity Rate")
     ax.set_title("Group-Stage Transitivity Rate by Tournament\n"
                  "(A beats B, B beats C → does A beat C?)", pad=12)
     ax.legend()
-    fig.tight_layout()
+    fig.tight_layout(rect=[0, 0.04, 1, 1])
+    fig.text(0.5, 0.01, REPO_URL, ha="center", va="bottom", fontsize=7.5, color="#888", style="italic")
     out = FIG / "01_transitivity_by_year.png"
     fig.savefig(out, dpi=150)
     plt.close(fig)
     print(f"  Saved {out.name}")
+
+
+def _boot_bucket_ci(app, bins, n_buckets, n_boot=10_000, seed=42):
+    """Group-level bootstrap: per-bucket 95% CIs and p-values (H0: rate = 0.5)."""
+    rng = np.random.default_rng(seed)
+    sub = app.dropna(subset=["rank_gap_ac"]).copy()
+    sub["rank_gap_ac"] = sub["rank_gap_ac"].astype(float)
+    sub["_bi"] = pd.cut(sub["rank_gap_ac"], bins=bins, labels=False)
+    sub = sub.dropna(subset=["_bi"])
+    sub["_bi"] = sub["_bi"].astype(int)
+    grp_keys = sub[["year", "group_name"]].drop_duplicates().reset_index(drop=True)
+    n_groups = len(grp_keys)
+    g_sums = np.zeros((n_groups, n_buckets))
+    g_counts = np.zeros((n_groups, n_buckets))
+    for gi, (_, row) in enumerate(grp_keys.iterrows()):
+        chunk = sub[(sub["year"] == row["year"]) & (sub["group_name"] == row["group_name"])]
+        for bi in range(n_buckets):
+            t = chunk.loc[chunk["_bi"] == bi, "transitive"]
+            g_sums[gi, bi] = t.sum()
+            g_counts[gi, bi] = len(t)
+    idx = rng.integers(0, n_groups, size=(n_boot, n_groups))
+    boot_s = g_sums[idx].sum(1)
+    boot_c = g_counts[idx].sum(1)
+    with np.errstate(invalid="ignore", divide="ignore"):
+        boot_r = np.where(boot_c > 0, boot_s / boot_c, np.nan)
+    ci_lo_list, ci_hi_list, p_val_list = [], [], []
+    for bi in range(n_buckets):
+        obs_rate = sub.loc[sub["_bi"] == bi, "transitive"].mean()
+        rates = boot_r[:, bi][~np.isnan(boot_r[:, bi])]
+        ci_lo, ci_hi = np.percentile(rates, [2.5, 97.5])
+        shifted = rates - rates.mean() + 0.5
+        p_val = float(np.mean(np.abs(shifted - 0.5) >= abs(obs_rate - 0.5)))
+        ci_lo_list.append(ci_lo)
+        ci_hi_list.append(ci_hi)
+        p_val_list.append(p_val)
+    return ci_lo_list, ci_hi_list, p_val_list
 
 
 # ---------------------------------------------------------------------------
@@ -98,24 +136,17 @@ def fig_by_rank_gap(app):
         .rename(columns={"sum": "k", "count": "n", "mean": "rate"})
         .reset_index()
     )
-    # Per-bucket 95% CIs and p-values (binomial, H0: rate = 0.50)
-    ci_lo, ci_hi, p_vals = [], [], []
-    for _, row in tbl.iterrows():
-        res = stats.binomtest(int(row["k"]), int(row["n"]), p=0.5, alternative="two-sided")
-        ci = res.proportion_ci(confidence_level=0.95)
-        ci_lo.append(ci.low)
-        ci_hi.append(ci.high)
-        p_vals.append(res.pvalue)
+    # Per-bucket 95% CIs and p-values (group-level bootstrap, H0: rate = 0.50)
+    ci_lo, ci_hi, p_vals = _boot_bucket_ci(app, bins, len(labels))
     tbl["ci_lo"] = ci_lo
     tbl["ci_hi"] = ci_hi
     tbl["p_val"] = p_vals
     tbl["err_lo"] = tbl["rate"] - tbl["ci_lo"]
     tbl["err_hi"] = tbl["ci_hi"] - tbl["rate"]
 
+    bucket_colors = [PALETTE["transitive"], "#FF9800", "#4CAF50"]  # blue, orange, green
     fig, ax = plt.subplots(figsize=(9, 6))
-    colors = [PALETTE["transitive"] if r >= 0.5 else PALETTE["not_transitive"]
-              for r in tbl["rate"]]
-    bars = ax.bar(tbl["bucket"].astype(str), tbl["rate"], color=colors, width=0.6,
+    bars = ax.bar(tbl["bucket"].astype(str), tbl["rate"], color=bucket_colors, width=0.6,
                   yerr=[tbl["err_lo"], tbl["err_hi"]], capsize=5,
                   error_kw={"elinewidth": 1.5, "ecolor": "#555"})
     ax.axhline(0.5, color="black", linestyle="--", linewidth=1.2, label="50% (chance)")
@@ -130,14 +161,15 @@ def fig_by_rank_gap(app):
         ax.text(bar.get_x() + bar.get_width() / 2, cap_top + 0.07,
                 f"[{row['ci_lo']:.2f}, {row['ci_hi']:.2f}]", ha="center", va="bottom",
                 fontsize=7.5, color="#555")
-    ax.set_ylim(0, 1.3)
-    ax.set_xlabel("Pre-Tournament Ranking: Team A vs Team C\n(rank_A − rank_C; negative = A ranked higher/better)")
+    ax.set_ylim(0, 1.0)
+    ax.set_xlabel("Pre-Tournament FIFA Ranking: Team A vs Team C\n(rank_A − rank_C; negative = A ranked higher/better)")
     ax.set_ylabel("Transitivity Rate")
-    ax.set_title("Transitivity Rate by Ranking Gap (A vs C)\n"
+    ax.set_title("Transitivity Rate by FIFA Ranking Gap (A vs C)\n"
                  "Among triples where A beat B and B beat C\n"
-                 "Error bars: 95% CI  |  * p < 0.05 vs 50% (binomial test)", pad=12)
+                 "Error bars: 95% bootstrap CI (n=10,000, group-level)  |  * p < 0.05 vs 50%", pad=12)
     ax.legend()
-    fig.tight_layout()
+    fig.tight_layout(rect=[0, 0.04, 1, 1])
+    fig.text(0.5, 0.01, REPO_URL, ha="center", va="bottom", fontsize=7.5, color="#888", style="italic")
     out = FIG / "02_transitivity_by_rank_gap.png"
     fig.savefig(out, dpi=150)
     plt.close(fig)
@@ -165,13 +197,14 @@ def fig_scatter(app):
     ax.axvline(0, color="#aaa", linestyle=":", linewidth=1)
     ax.set_yticks([0, 1])
     ax.set_yticklabels(["Not transitive (0)", "Transitive (1)"])
-    ax.set_xlabel("Ranking Gap: rank_A − rank_C\n(negative = A ranked higher/better)")
-    ax.set_title("Rank Gap vs Transitivity Outcome\nwith Logistic Regression Fit", pad=12)
+    ax.set_xlabel("FIFA Ranking Gap: rank_A − rank_C\n(negative = A ranked higher/better)")
+    ax.set_title("FIFA Ranking Gap vs Transitivity Outcome\nwith Logistic Regression Fit", pad=12)
     blue_patch = mpatches.Patch(color=PALETTE["transitive"], label="Transitive")
     red_patch = mpatches.Patch(color=PALETTE["not_transitive"], label="Not transitive")
     ax.legend(handles=[blue_patch, red_patch, plt.Line2D([0], [0], color="black", lw=2,
                                                           label="Logistic fit")])
-    fig.tight_layout()
+    fig.tight_layout(rect=[0, 0.04, 1, 1])
+    fig.text(0.5, 0.01, REPO_URL, ha="center", va="bottom", fontsize=7.5, color="#888", style="italic")
     out = FIG / "03_rank_gap_scatter.png"
     fig.savefig(out, dpi=150)
     plt.close(fig)
@@ -252,9 +285,10 @@ def fig_network(matches):
     ax_obj = fig.axes[0]
     ax_obj.set_xlim(-1.9, 1.9)
     ax_obj.set_ylim(-1.9, 1.9)
-    ax_obj.set_title(f"Match Results Network\n{target_year} World Cup — {target_group}",
+    ax_obj.set_title(f"Match Results Network\n{target_year} FIFA World Cup — {target_group}",
                      pad=14, fontsize=18)
-    fig.tight_layout()
+    fig.tight_layout(rect=[0, 0.04, 1, 1])
+    fig.text(0.5, 0.01, REPO_URL, ha="center", va="bottom", fontsize=7.5, color="#888", style="italic")
     out = FIG / "04_group_network_sample.png"
     fig.savefig(out, dpi=150)
     plt.close(fig)

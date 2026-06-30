@@ -18,18 +18,18 @@ Draws are treated as **0.5 wins** for both sides (consistent with points-table l
 | Test | Result |
 |---|---|
 | Overall transitivity rate | **46.5%** (86/185 applicable triples) |
-| Binomial test vs. 50% chance | p = 0.38 — **not significant** |
+| Group-level bootstrap vs. 50% chance | p = 0.50 — **not significant**; 95% CI [0.37, 0.57] |
 | Year-to-year variation | Chi-square p = **0.0003** — highly significant |
 | Ranking-gap effect (3 buckets) | Chi-square p = **0.0002** — highly significant |
 | Logistic regression (rank_gap_ac) | OR = 0.968 per rank, p = **0.0001** |
 
-**Per-bucket breakdown** (A-vs-C pre-tournament ranking gap):
+**Per-bucket breakdown** (A-vs-C pre-tournament ranking gap; CIs and p-values from group-level bootstrap, n=10,000):
 
-| Bucket | k/n | Rate | 95% CI | p-value |
+| Bucket | k/n | Rate | 95% bootstrap CI | p-value |
 |---|---|---|---|---|
-| A better (>=10 ranks) | 51/81 | 63.0% | [0.52, 0.73] | 0.026 * |
-| Similar (±10 ranks) | 14/40 | 35.0% | [0.21, 0.52] | 0.081 |
-| C better (>=10 ranks) | 9/36 | 25.0% | [0.12, 0.42] | 0.004 * |
+| A better (>=10 ranks) | 51/81 | 63.0% | [0.51, 0.74] | 0.021 * |
+| Similar (±10 ranks) | 14/40 | 35.0% | [0.18, 0.53] | 0.098 |
+| C better (>=10 ranks) | 9/36 | 25.0% | [0.12, 0.41] | 0.001 * |
 
 **Summary:** Overall, transitivity holds no more than chance. But conditioning on ranking splits the story sharply: when A holds a 10+ rank advantage over C, transitivity holds significantly *above* chance (63%, p = 0.026); when C holds the advantage, it falls significantly *below* chance (25%, p = 0.004). The middle bucket straddles 50% and is not significant. The 2006 World Cup was remarkably transitive (82%); 2022 was the most chaotic (21%).
 
@@ -86,7 +86,7 @@ FIFA Transitivity/
 ├── scripts/
 │   ├── 01_download_data.py           # Fetch raw CSVs from GitHub
 │   ├── 02_process_data.py            # Filter, join, build triples
-│   ├── 03_analysis.py                # Statistical tests (binomial, chi-sq, logit)
+│   ├── 03_analysis.py                # Statistical tests (bootstrap, chi-sq, logit)
 │   └── 04_visualizations.py          # Generate all figures
 └── requirements.txt
 ```
@@ -100,7 +100,7 @@ Red bars = below 50%; blue = above 50%. Error bars are 95% binomial CIs.
 Significant tournament-to-tournament variation (chi-sq p = 0.0003).
 
 **Figure 2 — Transitivity rate by ranking gap (A vs C)**
-Three buckets: A better, similar, C better (±10-rank threshold). Error bars show 95% binomial CIs; CI values printed above each bar; `*` marks buckets significantly different from 50% chance. Clear monotone trend across all three buckets (chi-sq p = 0.0002).
+Three buckets: A better, similar, C better (±10-rank threshold). Error bars show 95% bootstrap CIs (group-level resampling, n=10,000); CI values printed above each bar; `*` marks buckets significantly different from 50% chance. Clear monotone trend across all three buckets (chi-sq p = 0.0002).
 
 **Figure 3 — Rank gap vs outcome with logistic fit**
 Each dot is one applicable triple (jittered vertically). The logistic curve shows P(transitive) declining as rank_gap_ac increases (i.e., as C becomes better-ranked than A).
@@ -128,6 +128,6 @@ All scripts are idempotent — running them twice is safe.
 ## Limitations
 
 - **Small N**: only 185 applicable triples across 8 tournaments. Year-level and bucket-level subgroup counts are small (8–81), so per-bucket p-values are approximate.
-- **Non-independence**: triples within the same group share matches; standard p-values treat them as independent.
+- **Non-independence**: triples within the same group share matches. The overall and per-bucket CIs and p-values use group-level bootstrap resampling (n=10,000) to account for this; year-level chi-square still treats triples as independent.
 - **Draw treatment**: calling draws 0.5 is a modelling choice. A strict "only wins count" framing would reduce N further.
 - **Rankings before 1994**: the FIFA ranking system launched in 1992; the 1994 snapshot is the earliest available, so coverage is complete for this study period.
