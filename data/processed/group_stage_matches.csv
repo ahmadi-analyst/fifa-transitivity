@@ -1,0 +1,373 @@
+tournament_id,year,match_date,group_name,home_team,home_code,away_team,away_code,home_score,away_score,result,home_pts,away_pts
+WC-1994,1994,1994-06-17,Group C,Germany,DEU,Bolivia,BOL,1,0,home team win,1.0,0.0
+WC-1994,1994,1994-06-17,Group C,Spain,ESP,South Korea,KOR,2,2,draw,0.5,0.5
+WC-1994,1994,1994-06-18,Group A,United States,USA,Switzerland,CHE,1,1,draw,0.5,0.5
+WC-1994,1994,1994-06-18,Group E,Italy,ITA,Republic of Ireland,IRL,0,1,away team win,0.0,1.0
+WC-1994,1994,1994-06-18,Group A,Colombia,COL,Romania,ROU,1,3,away team win,0.0,1.0
+WC-1994,1994,1994-06-19,Group F,Belgium,BEL,Morocco,MAR,1,0,home team win,1.0,0.0
+WC-1994,1994,1994-06-19,Group E,Norway,NOR,Mexico,MEX,1,0,home team win,1.0,0.0
+WC-1994,1994,1994-06-19,Group B,Cameroon,CMR,Sweden,SWE,2,2,draw,0.5,0.5
+WC-1994,1994,1994-06-20,Group B,Brazil,BRA,Russia,RUS,2,0,home team win,1.0,0.0
+WC-1994,1994,1994-06-20,Group F,Netherlands,NLD,Saudi Arabia,SAU,2,1,home team win,1.0,0.0
+WC-1994,1994,1994-06-21,Group D,Argentina,ARG,Greece,GRC,4,0,home team win,1.0,0.0
+WC-1994,1994,1994-06-21,Group C,Germany,DEU,Spain,ESP,1,1,draw,0.5,0.5
+WC-1994,1994,1994-06-21,Group D,Nigeria,NGA,Bulgaria,BGR,3,0,home team win,1.0,0.0
+WC-1994,1994,1994-06-22,Group A,Romania,ROU,Switzerland,CHE,1,4,away team win,0.0,1.0
+WC-1994,1994,1994-06-22,Group A,United States,USA,Colombia,COL,2,1,home team win,1.0,0.0
+WC-1994,1994,1994-06-23,Group E,Italy,ITA,Norway,NOR,1,0,home team win,1.0,0.0
+WC-1994,1994,1994-06-23,Group C,South Korea,KOR,Bolivia,BOL,0,0,draw,0.5,0.5
+WC-1994,1994,1994-06-24,Group E,Mexico,MEX,Republic of Ireland,IRL,2,1,home team win,1.0,0.0
+WC-1994,1994,1994-06-24,Group B,Brazil,BRA,Cameroon,CMR,3,0,home team win,1.0,0.0
+WC-1994,1994,1994-06-24,Group B,Sweden,SWE,Russia,RUS,3,1,home team win,1.0,0.0
+WC-1994,1994,1994-06-25,Group F,Belgium,BEL,Netherlands,NLD,1,0,home team win,1.0,0.0
+WC-1994,1994,1994-06-25,Group F,Saudi Arabia,SAU,Morocco,MAR,2,1,home team win,1.0,0.0
+WC-1994,1994,1994-06-25,Group D,Argentina,ARG,Nigeria,NGA,2,1,home team win,1.0,0.0
+WC-1994,1994,1994-06-26,Group D,Bulgaria,BGR,Greece,GRC,4,0,home team win,1.0,0.0
+WC-1994,1994,1994-06-26,Group A,Switzerland,CHE,Colombia,COL,0,2,away team win,0.0,1.0
+WC-1994,1994,1994-06-26,Group A,United States,USA,Romania,ROU,0,1,away team win,0.0,1.0
+WC-1994,1994,1994-06-27,Group C,Bolivia,BOL,Spain,ESP,1,3,away team win,0.0,1.0
+WC-1994,1994,1994-06-27,Group C,Germany,DEU,South Korea,KOR,3,2,home team win,1.0,0.0
+WC-1994,1994,1994-06-28,Group E,Italy,ITA,Mexico,MEX,1,1,draw,0.5,0.5
+WC-1994,1994,1994-06-28,Group E,Republic of Ireland,IRL,Norway,NOR,0,0,draw,0.5,0.5
+WC-1994,1994,1994-06-28,Group B,Russia,RUS,Cameroon,CMR,6,1,home team win,1.0,0.0
+WC-1994,1994,1994-06-28,Group B,Brazil,BRA,Sweden,SWE,1,1,draw,0.5,0.5
+WC-1994,1994,1994-06-29,Group F,Belgium,BEL,Saudi Arabia,SAU,0,1,away team win,0.0,1.0
+WC-1994,1994,1994-06-29,Group F,Morocco,MAR,Netherlands,NLD,1,2,away team win,0.0,1.0
+WC-1994,1994,1994-06-30,Group D,Argentina,ARG,Bulgaria,BGR,0,2,away team win,0.0,1.0
+WC-1994,1994,1994-06-30,Group D,Greece,GRC,Nigeria,NGA,0,2,away team win,0.0,1.0
+WC-1998,1998,1998-06-10,Group A,Brazil,BRA,Scotland,SCO,2,1,home team win,1.0,0.0
+WC-1998,1998,1998-06-10,Group A,Morocco,MAR,Norway,NOR,2,2,draw,0.5,0.5
+WC-1998,1998,1998-06-11,Group B,Italy,ITA,Chile,CHL,2,2,draw,0.5,0.5
+WC-1998,1998,1998-06-11,Group B,Cameroon,CMR,Austria,AUT,1,1,draw,0.5,0.5
+WC-1998,1998,1998-06-12,Group D,Paraguay,PRY,Bulgaria,BGR,0,0,draw,0.5,0.5
+WC-1998,1998,1998-06-12,Group C,Saudi Arabia,SAU,Denmark,DNK,0,1,away team win,0.0,1.0
+WC-1998,1998,1998-06-12,Group C,France,FRA,South Africa,ZAF,3,0,home team win,1.0,0.0
+WC-1998,1998,1998-06-13,Group D,Spain,ESP,Nigeria,NGA,2,3,away team win,0.0,1.0
+WC-1998,1998,1998-06-13,Group E,South Korea,KOR,Mexico,MEX,1,3,away team win,0.0,1.0
+WC-1998,1998,1998-06-13,Group E,Netherlands,NLD,Belgium,BEL,0,0,draw,0.5,0.5
+WC-1998,1998,1998-06-14,Group H,Argentina,ARG,Japan,JPN,1,0,home team win,1.0,0.0
+WC-1998,1998,1998-06-14,Group F,Yugoslavia,YUG,Iran,IRN,1,0,home team win,1.0,0.0
+WC-1998,1998,1998-06-14,Group H,Jamaica,JAM,Croatia,HRV,1,3,away team win,0.0,1.0
+WC-1998,1998,1998-06-15,Group G,England,ENG,Tunisia,TUN,2,0,home team win,1.0,0.0
+WC-1998,1998,1998-06-15,Group G,Romania,ROU,Colombia,COL,1,0,home team win,1.0,0.0
+WC-1998,1998,1998-06-15,Group F,Germany,DEU,United States,USA,2,0,home team win,1.0,0.0
+WC-1998,1998,1998-06-16,Group A,Scotland,SCO,Norway,NOR,1,1,draw,0.5,0.5
+WC-1998,1998,1998-06-16,Group A,Brazil,BRA,Morocco,MAR,3,0,home team win,1.0,0.0
+WC-1998,1998,1998-06-17,Group B,Chile,CHL,Austria,AUT,1,1,draw,0.5,0.5
+WC-1998,1998,1998-06-17,Group B,Italy,ITA,Cameroon,CMR,3,0,home team win,1.0,0.0
+WC-1998,1998,1998-06-18,Group C,South Africa,ZAF,Denmark,DNK,1,1,draw,0.5,0.5
+WC-1998,1998,1998-06-18,Group C,France,FRA,Saudi Arabia,SAU,4,0,home team win,1.0,0.0
+WC-1998,1998,1998-06-19,Group D,Nigeria,NGA,Bulgaria,BGR,1,0,home team win,1.0,0.0
+WC-1998,1998,1998-06-19,Group D,Spain,ESP,Paraguay,PRY,0,0,draw,0.5,0.5
+WC-1998,1998,1998-06-20,Group H,Japan,JPN,Croatia,HRV,0,1,away team win,0.0,1.0
+WC-1998,1998,1998-06-20,Group E,Belgium,BEL,Mexico,MEX,2,2,draw,0.5,0.5
+WC-1998,1998,1998-06-20,Group E,Netherlands,NLD,South Korea,KOR,5,0,home team win,1.0,0.0
+WC-1998,1998,1998-06-21,Group F,Germany,DEU,Yugoslavia,YUG,2,2,draw,0.5,0.5
+WC-1998,1998,1998-06-21,Group H,Argentina,ARG,Jamaica,JAM,5,0,home team win,1.0,0.0
+WC-1998,1998,1998-06-21,Group F,United States,USA,Iran,IRN,1,2,away team win,0.0,1.0
+WC-1998,1998,1998-06-22,Group G,Colombia,COL,Tunisia,TUN,1,0,home team win,1.0,0.0
+WC-1998,1998,1998-06-22,Group G,Romania,ROU,England,ENG,2,1,home team win,1.0,0.0
+WC-1998,1998,1998-06-23,Group B,Chile,CHL,Cameroon,CMR,1,1,draw,0.5,0.5
+WC-1998,1998,1998-06-23,Group B,Italy,ITA,Austria,AUT,2,1,home team win,1.0,0.0
+WC-1998,1998,1998-06-23,Group A,Brazil,BRA,Norway,NOR,1,2,away team win,0.0,1.0
+WC-1998,1998,1998-06-23,Group A,Scotland,SCO,Morocco,MAR,0,3,away team win,0.0,1.0
+WC-1998,1998,1998-06-24,Group C,France,FRA,Denmark,DNK,2,1,home team win,1.0,0.0
+WC-1998,1998,1998-06-24,Group C,South Africa,ZAF,Saudi Arabia,SAU,2,2,draw,0.5,0.5
+WC-1998,1998,1998-06-24,Group D,Nigeria,NGA,Paraguay,PRY,1,3,away team win,0.0,1.0
+WC-1998,1998,1998-06-24,Group D,Spain,ESP,Bulgaria,BGR,6,1,home team win,1.0,0.0
+WC-1998,1998,1998-06-25,Group E,Belgium,BEL,South Korea,KOR,1,1,draw,0.5,0.5
+WC-1998,1998,1998-06-25,Group E,Netherlands,NLD,Mexico,MEX,2,2,draw,0.5,0.5
+WC-1998,1998,1998-06-25,Group F,Germany,DEU,Iran,IRN,2,0,home team win,1.0,0.0
+WC-1998,1998,1998-06-25,Group F,United States,USA,Yugoslavia,YUG,0,1,away team win,0.0,1.0
+WC-1998,1998,1998-06-26,Group H,Argentina,ARG,Croatia,HRV,1,0,home team win,1.0,0.0
+WC-1998,1998,1998-06-26,Group H,Japan,JPN,Jamaica,JAM,1,2,away team win,0.0,1.0
+WC-1998,1998,1998-06-26,Group G,Colombia,COL,England,ENG,0,2,away team win,0.0,1.0
+WC-1998,1998,1998-06-26,Group G,Romania,ROU,Tunisia,TUN,1,1,draw,0.5,0.5
+WC-2002,2002,2002-05-31,Group A,France,FRA,Senegal,SEN,0,1,away team win,0.0,1.0
+WC-2002,2002,2002-06-01,Group E,Republic of Ireland,IRL,Cameroon,CMR,1,1,draw,0.5,0.5
+WC-2002,2002,2002-06-01,Group A,Uruguay,URY,Denmark,DNK,1,2,away team win,0.0,1.0
+WC-2002,2002,2002-06-01,Group E,Germany,DEU,Saudi Arabia,SAU,8,0,home team win,1.0,0.0
+WC-2002,2002,2002-06-02,Group F,Argentina,ARG,Nigeria,NGA,1,0,home team win,1.0,0.0
+WC-2002,2002,2002-06-02,Group B,Paraguay,PRY,South Africa,ZAF,2,2,draw,0.5,0.5
+WC-2002,2002,2002-06-02,Group F,England,ENG,Sweden,SWE,1,1,draw,0.5,0.5
+WC-2002,2002,2002-06-02,Group B,Spain,ESP,Slovenia,SVN,3,1,home team win,1.0,0.0
+WC-2002,2002,2002-06-03,Group G,Croatia,HRV,Mexico,MEX,0,1,away team win,0.0,1.0
+WC-2002,2002,2002-06-03,Group C,Brazil,BRA,Turkey,TUR,2,1,home team win,1.0,0.0
+WC-2002,2002,2002-06-03,Group G,Italy,ITA,Ecuador,ECU,2,0,home team win,1.0,0.0
+WC-2002,2002,2002-06-04,Group C,China,CHN,Costa Rica,CRI,0,2,away team win,0.0,1.0
+WC-2002,2002,2002-06-04,Group H,Japan,JPN,Belgium,BEL,2,2,draw,0.5,0.5
+WC-2002,2002,2002-06-04,Group D,South Korea,KOR,Poland,POL,2,0,home team win,1.0,0.0
+WC-2002,2002,2002-06-05,Group H,Russia,RUS,Tunisia,TUN,2,0,home team win,1.0,0.0
+WC-2002,2002,2002-06-05,Group D,United States,USA,Portugal,PRT,3,2,home team win,1.0,0.0
+WC-2002,2002,2002-06-05,Group E,Germany,DEU,Republic of Ireland,IRL,1,1,draw,0.5,0.5
+WC-2002,2002,2002-06-06,Group A,Denmark,DNK,Senegal,SEN,1,1,draw,0.5,0.5
+WC-2002,2002,2002-06-06,Group E,Cameroon,CMR,Saudi Arabia,SAU,1,0,home team win,1.0,0.0
+WC-2002,2002,2002-06-06,Group A,France,FRA,Uruguay,URY,0,0,draw,0.5,0.5
+WC-2002,2002,2002-06-07,Group F,Sweden,SWE,Nigeria,NGA,2,1,home team win,1.0,0.0
+WC-2002,2002,2002-06-07,Group B,Spain,ESP,Paraguay,PRY,3,1,home team win,1.0,0.0
+WC-2002,2002,2002-06-07,Group F,Argentina,ARG,England,ENG,0,1,away team win,0.0,1.0
+WC-2002,2002,2002-06-08,Group B,South Africa,ZAF,Slovenia,SVN,1,0,home team win,1.0,0.0
+WC-2002,2002,2002-06-08,Group G,Italy,ITA,Croatia,HRV,1,2,away team win,0.0,1.0
+WC-2002,2002,2002-06-08,Group C,Brazil,BRA,China,CHN,4,0,home team win,1.0,0.0
+WC-2002,2002,2002-06-09,Group G,Mexico,MEX,Ecuador,ECU,2,1,home team win,1.0,0.0
+WC-2002,2002,2002-06-09,Group C,Costa Rica,CRI,Turkey,TUR,1,1,draw,0.5,0.5
+WC-2002,2002,2002-06-09,Group H,Japan,JPN,Russia,RUS,1,0,home team win,1.0,0.0
+WC-2002,2002,2002-06-10,Group D,South Korea,KOR,United States,USA,1,1,draw,0.5,0.5
+WC-2002,2002,2002-06-10,Group H,Tunisia,TUN,Belgium,BEL,1,1,draw,0.5,0.5
+WC-2002,2002,2002-06-10,Group D,Portugal,PRT,Poland,POL,4,0,home team win,1.0,0.0
+WC-2002,2002,2002-06-11,Group A,Denmark,DNK,France,FRA,2,0,home team win,1.0,0.0
+WC-2002,2002,2002-06-11,Group A,Senegal,SEN,Uruguay,URY,3,3,draw,0.5,0.5
+WC-2002,2002,2002-06-11,Group E,Cameroon,CMR,Germany,DEU,0,2,away team win,0.0,1.0
+WC-2002,2002,2002-06-11,Group E,Saudi Arabia,SAU,Republic of Ireland,IRL,0,3,away team win,0.0,1.0
+WC-2002,2002,2002-06-12,Group F,Nigeria,NGA,England,ENG,0,0,draw,0.5,0.5
+WC-2002,2002,2002-06-12,Group F,Sweden,SWE,Argentina,ARG,1,1,draw,0.5,0.5
+WC-2002,2002,2002-06-12,Group B,Slovenia,SVN,Paraguay,PRY,1,3,away team win,0.0,1.0
+WC-2002,2002,2002-06-12,Group B,South Africa,ZAF,Spain,ESP,2,3,away team win,0.0,1.0
+WC-2002,2002,2002-06-13,Group C,Costa Rica,CRI,Brazil,BRA,2,5,away team win,0.0,1.0
+WC-2002,2002,2002-06-13,Group C,Turkey,TUR,China,CHN,3,0,home team win,1.0,0.0
+WC-2002,2002,2002-06-13,Group G,Ecuador,ECU,Croatia,HRV,1,0,home team win,1.0,0.0
+WC-2002,2002,2002-06-13,Group G,Mexico,MEX,Italy,ITA,1,1,draw,0.5,0.5
+WC-2002,2002,2002-06-14,Group H,Belgium,BEL,Russia,RUS,3,2,home team win,1.0,0.0
+WC-2002,2002,2002-06-14,Group H,Tunisia,TUN,Japan,JPN,0,2,away team win,0.0,1.0
+WC-2002,2002,2002-06-14,Group D,Poland,POL,United States,USA,3,1,home team win,1.0,0.0
+WC-2002,2002,2002-06-14,Group D,Portugal,PRT,South Korea,KOR,0,1,away team win,0.0,1.0
+WC-2006,2006,2006-06-09,Group A,Germany,DEU,Costa Rica,CRI,4,2,home team win,1.0,0.0
+WC-2006,2006,2006-06-09,Group A,Poland,POL,Ecuador,ECU,0,2,away team win,0.0,1.0
+WC-2006,2006,2006-06-10,Group B,England,ENG,Paraguay,PRY,1,0,home team win,1.0,0.0
+WC-2006,2006,2006-06-10,Group B,Trinidad and Tobago,TTO,Sweden,SWE,0,0,draw,0.5,0.5
+WC-2006,2006,2006-06-10,Group C,Argentina,ARG,Ivory Coast,CIV,2,1,home team win,1.0,0.0
+WC-2006,2006,2006-06-11,Group C,Serbia and Montenegro,SCG,Netherlands,NLD,0,1,away team win,0.0,1.0
+WC-2006,2006,2006-06-11,Group D,Mexico,MEX,Iran,IRN,3,1,home team win,1.0,0.0
+WC-2006,2006,2006-06-11,Group D,Angola,AGO,Portugal,PRT,0,1,away team win,0.0,1.0
+WC-2006,2006,2006-06-12,Group F,Australia,AUS,Japan,JPN,3,1,home team win,1.0,0.0
+WC-2006,2006,2006-06-12,Group E,United States,USA,Czech Republic,CZE,0,3,away team win,0.0,1.0
+WC-2006,2006,2006-06-12,Group E,Italy,ITA,Ghana,GHA,2,0,home team win,1.0,0.0
+WC-2006,2006,2006-06-13,Group G,South Korea,KOR,Togo,TGO,2,1,home team win,1.0,0.0
+WC-2006,2006,2006-06-13,Group G,France,FRA,Switzerland,CHE,0,0,draw,0.5,0.5
+WC-2006,2006,2006-06-13,Group F,Brazil,BRA,Croatia,HRV,1,0,home team win,1.0,0.0
+WC-2006,2006,2006-06-14,Group H,Spain,ESP,Ukraine,UKR,4,0,home team win,1.0,0.0
+WC-2006,2006,2006-06-14,Group H,Tunisia,TUN,Saudi Arabia,SAU,2,2,draw,0.5,0.5
+WC-2006,2006,2006-06-14,Group A,Germany,DEU,Poland,POL,1,0,home team win,1.0,0.0
+WC-2006,2006,2006-06-15,Group A,Ecuador,ECU,Costa Rica,CRI,3,0,home team win,1.0,0.0
+WC-2006,2006,2006-06-15,Group B,England,ENG,Trinidad and Tobago,TTO,2,0,home team win,1.0,0.0
+WC-2006,2006,2006-06-15,Group B,Sweden,SWE,Paraguay,PRY,1,0,home team win,1.0,0.0
+WC-2006,2006,2006-06-16,Group C,Argentina,ARG,Serbia and Montenegro,SCG,6,0,home team win,1.0,0.0
+WC-2006,2006,2006-06-16,Group C,Netherlands,NLD,Ivory Coast,CIV,2,1,home team win,1.0,0.0
+WC-2006,2006,2006-06-16,Group D,Mexico,MEX,Angola,AGO,0,0,draw,0.5,0.5
+WC-2006,2006,2006-06-17,Group D,Portugal,PRT,Iran,IRN,2,0,home team win,1.0,0.0
+WC-2006,2006,2006-06-17,Group E,Czech Republic,CZE,Ghana,GHA,0,2,away team win,0.0,1.0
+WC-2006,2006,2006-06-17,Group E,Italy,ITA,United States,USA,1,1,draw,0.5,0.5
+WC-2006,2006,2006-06-18,Group F,Japan,JPN,Croatia,HRV,0,0,draw,0.5,0.5
+WC-2006,2006,2006-06-18,Group F,Brazil,BRA,Australia,AUS,2,0,home team win,1.0,0.0
+WC-2006,2006,2006-06-18,Group G,France,FRA,South Korea,KOR,1,1,draw,0.5,0.5
+WC-2006,2006,2006-06-19,Group G,Togo,TGO,Switzerland,CHE,0,2,away team win,0.0,1.0
+WC-2006,2006,2006-06-19,Group H,Saudi Arabia,SAU,Ukraine,UKR,0,4,away team win,0.0,1.0
+WC-2006,2006,2006-06-19,Group H,Spain,ESP,Tunisia,TUN,3,1,home team win,1.0,0.0
+WC-2006,2006,2006-06-20,Group A,Costa Rica,CRI,Poland,POL,1,2,away team win,0.0,1.0
+WC-2006,2006,2006-06-20,Group A,Ecuador,ECU,Germany,DEU,0,3,away team win,0.0,1.0
+WC-2006,2006,2006-06-20,Group B,Paraguay,PRY,Trinidad and Tobago,TTO,2,0,home team win,1.0,0.0
+WC-2006,2006,2006-06-20,Group B,Sweden,SWE,England,ENG,2,2,draw,0.5,0.5
+WC-2006,2006,2006-06-21,Group D,Iran,IRN,Angola,AGO,1,1,draw,0.5,0.5
+WC-2006,2006,2006-06-21,Group D,Portugal,PRT,Mexico,MEX,2,1,home team win,1.0,0.0
+WC-2006,2006,2006-06-21,Group C,Ivory Coast,CIV,Serbia and Montenegro,SCG,3,2,home team win,1.0,0.0
+WC-2006,2006,2006-06-21,Group C,Netherlands,NLD,Argentina,ARG,0,0,draw,0.5,0.5
+WC-2006,2006,2006-06-22,Group E,Czech Republic,CZE,Italy,ITA,0,2,away team win,0.0,1.0
+WC-2006,2006,2006-06-22,Group E,Ghana,GHA,United States,USA,2,1,home team win,1.0,0.0
+WC-2006,2006,2006-06-22,Group F,Croatia,HRV,Australia,AUS,2,2,draw,0.5,0.5
+WC-2006,2006,2006-06-22,Group F,Japan,JPN,Brazil,BRA,1,4,away team win,0.0,1.0
+WC-2006,2006,2006-06-23,Group H,Saudi Arabia,SAU,Spain,ESP,0,1,away team win,0.0,1.0
+WC-2006,2006,2006-06-23,Group H,Ukraine,UKR,Tunisia,TUN,1,0,home team win,1.0,0.0
+WC-2006,2006,2006-06-23,Group G,Switzerland,CHE,South Korea,KOR,2,0,home team win,1.0,0.0
+WC-2006,2006,2006-06-23,Group G,Togo,TGO,France,FRA,0,2,away team win,0.0,1.0
+WC-2010,2010,2010-06-11,Group A,South Africa,ZAF,Mexico,MEX,1,1,draw,0.5,0.5
+WC-2010,2010,2010-06-11,Group A,Uruguay,URY,France,FRA,0,0,draw,0.5,0.5
+WC-2010,2010,2010-06-12,Group B,South Korea,KOR,Greece,GRC,2,0,home team win,1.0,0.0
+WC-2010,2010,2010-06-12,Group B,Argentina,ARG,Nigeria,NGA,1,0,home team win,1.0,0.0
+WC-2010,2010,2010-06-12,Group C,England,ENG,United States,USA,1,1,draw,0.5,0.5
+WC-2010,2010,2010-06-13,Group C,Algeria,DZA,Slovenia,SVN,0,1,away team win,0.0,1.0
+WC-2010,2010,2010-06-13,Group D,Serbia,SRB,Ghana,GHA,0,1,away team win,0.0,1.0
+WC-2010,2010,2010-06-13,Group D,Germany,DEU,Australia,AUS,4,0,home team win,1.0,0.0
+WC-2010,2010,2010-06-14,Group E,Netherlands,NLD,Denmark,DNK,2,0,home team win,1.0,0.0
+WC-2010,2010,2010-06-14,Group E,Japan,JPN,Cameroon,CMR,1,0,home team win,1.0,0.0
+WC-2010,2010,2010-06-14,Group F,Italy,ITA,Paraguay,PRY,1,1,draw,0.5,0.5
+WC-2010,2010,2010-06-15,Group F,New Zealand,NZL,Slovakia,SVK,1,1,draw,0.5,0.5
+WC-2010,2010,2010-06-15,Group G,Ivory Coast,CIV,Portugal,PRT,0,0,draw,0.5,0.5
+WC-2010,2010,2010-06-15,Group G,Brazil,BRA,North Korea,PRK,2,1,home team win,1.0,0.0
+WC-2010,2010,2010-06-16,Group H,Honduras,HND,Chile,CHL,0,1,away team win,0.0,1.0
+WC-2010,2010,2010-06-16,Group H,Spain,ESP,Switzerland,CHE,0,1,away team win,0.0,1.0
+WC-2010,2010,2010-06-16,Group A,South Africa,ZAF,Uruguay,URY,0,3,away team win,0.0,1.0
+WC-2010,2010,2010-06-17,Group B,Argentina,ARG,South Korea,KOR,4,1,home team win,1.0,0.0
+WC-2010,2010,2010-06-17,Group B,Greece,GRC,Nigeria,NGA,2,1,home team win,1.0,0.0
+WC-2010,2010,2010-06-17,Group A,France,FRA,Mexico,MEX,0,2,away team win,0.0,1.0
+WC-2010,2010,2010-06-18,Group D,Germany,DEU,Serbia,SRB,0,1,away team win,0.0,1.0
+WC-2010,2010,2010-06-18,Group C,Slovenia,SVN,United States,USA,2,2,draw,0.5,0.5
+WC-2010,2010,2010-06-18,Group C,England,ENG,Algeria,DZA,0,0,draw,0.5,0.5
+WC-2010,2010,2010-06-19,Group E,Netherlands,NLD,Japan,JPN,1,0,home team win,1.0,0.0
+WC-2010,2010,2010-06-19,Group D,Ghana,GHA,Australia,AUS,1,1,draw,0.5,0.5
+WC-2010,2010,2010-06-19,Group E,Cameroon,CMR,Denmark,DNK,1,2,away team win,0.0,1.0
+WC-2010,2010,2010-06-20,Group F,Slovakia,SVK,Paraguay,PRY,0,2,away team win,0.0,1.0
+WC-2010,2010,2010-06-20,Group F,Italy,ITA,New Zealand,NZL,1,1,draw,0.5,0.5
+WC-2010,2010,2010-06-20,Group G,Brazil,BRA,Ivory Coast,CIV,3,1,home team win,1.0,0.0
+WC-2010,2010,2010-06-21,Group G,Portugal,PRT,North Korea,PRK,7,0,home team win,1.0,0.0
+WC-2010,2010,2010-06-21,Group H,Chile,CHL,Switzerland,CHE,1,0,home team win,1.0,0.0
+WC-2010,2010,2010-06-21,Group H,Spain,ESP,Honduras,HND,2,0,home team win,1.0,0.0
+WC-2010,2010,2010-06-22,Group A,France,FRA,South Africa,ZAF,1,2,away team win,0.0,1.0
+WC-2010,2010,2010-06-22,Group A,Mexico,MEX,Uruguay,URY,0,1,away team win,0.0,1.0
+WC-2010,2010,2010-06-22,Group B,Greece,GRC,Argentina,ARG,0,2,away team win,0.0,1.0
+WC-2010,2010,2010-06-22,Group B,Nigeria,NGA,South Korea,KOR,2,2,draw,0.5,0.5
+WC-2010,2010,2010-06-23,Group C,Slovenia,SVN,England,ENG,0,1,away team win,0.0,1.0
+WC-2010,2010,2010-06-23,Group C,United States,USA,Algeria,DZA,1,0,home team win,1.0,0.0
+WC-2010,2010,2010-06-23,Group D,Australia,AUS,Serbia,SRB,2,1,home team win,1.0,0.0
+WC-2010,2010,2010-06-23,Group D,Ghana,GHA,Germany,DEU,0,1,away team win,0.0,1.0
+WC-2010,2010,2010-06-24,Group F,Paraguay,PRY,New Zealand,NZL,0,0,draw,0.5,0.5
+WC-2010,2010,2010-06-24,Group F,Slovakia,SVK,Italy,ITA,3,2,home team win,1.0,0.0
+WC-2010,2010,2010-06-24,Group E,Cameroon,CMR,Netherlands,NLD,1,2,away team win,0.0,1.0
+WC-2010,2010,2010-06-24,Group E,Denmark,DNK,Japan,JPN,1,3,away team win,0.0,1.0
+WC-2010,2010,2010-06-25,Group G,North Korea,PRK,Ivory Coast,CIV,0,3,away team win,0.0,1.0
+WC-2010,2010,2010-06-25,Group G,Portugal,PRT,Brazil,BRA,0,0,draw,0.5,0.5
+WC-2010,2010,2010-06-25,Group H,Chile,CHL,Spain,ESP,1,2,away team win,0.0,1.0
+WC-2010,2010,2010-06-25,Group H,Switzerland,CHE,Honduras,HND,0,0,draw,0.5,0.5
+WC-2014,2014,2014-06-12,Group A,Brazil,BRA,Croatia,HRV,3,1,home team win,1.0,0.0
+WC-2014,2014,2014-06-13,Group A,Mexico,MEX,Cameroon,CMR,1,0,home team win,1.0,0.0
+WC-2014,2014,2014-06-13,Group B,Spain,ESP,Netherlands,NLD,1,5,away team win,0.0,1.0
+WC-2014,2014,2014-06-13,Group B,Chile,CHL,Australia,AUS,3,1,home team win,1.0,0.0
+WC-2014,2014,2014-06-14,Group C,Colombia,COL,Greece,GRC,3,0,home team win,1.0,0.0
+WC-2014,2014,2014-06-14,Group D,Uruguay,URY,Costa Rica,CRI,1,3,away team win,0.0,1.0
+WC-2014,2014,2014-06-14,Group D,England,ENG,Italy,ITA,1,2,away team win,0.0,1.0
+WC-2014,2014,2014-06-14,Group C,Ivory Coast,CIV,Japan,JPN,2,1,home team win,1.0,0.0
+WC-2014,2014,2014-06-15,Group E,Switzerland,CHE,Ecuador,ECU,2,1,home team win,1.0,0.0
+WC-2014,2014,2014-06-15,Group E,France,FRA,Honduras,HND,3,0,home team win,1.0,0.0
+WC-2014,2014,2014-06-15,Group F,Argentina,ARG,Bosnia and Herzegovina,BIH,2,1,home team win,1.0,0.0
+WC-2014,2014,2014-06-16,Group G,Germany,DEU,Portugal,PRT,4,0,home team win,1.0,0.0
+WC-2014,2014,2014-06-16,Group F,Iran,IRN,Nigeria,NGA,0,0,draw,0.5,0.5
+WC-2014,2014,2014-06-16,Group G,Ghana,GHA,United States,USA,1,2,away team win,0.0,1.0
+WC-2014,2014,2014-06-17,Group H,Belgium,BEL,Algeria,DZA,2,1,home team win,1.0,0.0
+WC-2014,2014,2014-06-17,Group A,Brazil,BRA,Mexico,MEX,0,0,draw,0.5,0.5
+WC-2014,2014,2014-06-17,Group H,Russia,RUS,South Korea,KOR,1,1,draw,0.5,0.5
+WC-2014,2014,2014-06-18,Group B,Australia,AUS,Netherlands,NLD,2,3,away team win,0.0,1.0
+WC-2014,2014,2014-06-18,Group B,Spain,ESP,Chile,CHL,0,2,away team win,0.0,1.0
+WC-2014,2014,2014-06-18,Group A,Cameroon,CMR,Croatia,HRV,0,4,away team win,0.0,1.0
+WC-2014,2014,2014-06-19,Group C,Colombia,COL,Ivory Coast,CIV,2,1,home team win,1.0,0.0
+WC-2014,2014,2014-06-19,Group D,Uruguay,URY,England,ENG,2,1,home team win,1.0,0.0
+WC-2014,2014,2014-06-19,Group C,Japan,JPN,Greece,GRC,0,0,draw,0.5,0.5
+WC-2014,2014,2014-06-20,Group D,Italy,ITA,Costa Rica,CRI,0,1,away team win,0.0,1.0
+WC-2014,2014,2014-06-20,Group E,Switzerland,CHE,France,FRA,2,5,away team win,0.0,1.0
+WC-2014,2014,2014-06-20,Group E,Honduras,HND,Ecuador,ECU,1,2,away team win,0.0,1.0
+WC-2014,2014,2014-06-21,Group F,Argentina,ARG,Iran,IRN,1,0,home team win,1.0,0.0
+WC-2014,2014,2014-06-21,Group G,Germany,DEU,Ghana,GHA,2,2,draw,0.5,0.5
+WC-2014,2014,2014-06-21,Group F,Nigeria,NGA,Bosnia and Herzegovina,BIH,1,0,home team win,1.0,0.0
+WC-2014,2014,2014-06-22,Group H,Belgium,BEL,Russia,RUS,1,0,home team win,1.0,0.0
+WC-2014,2014,2014-06-22,Group H,South Korea,KOR,Algeria,DZA,2,4,away team win,0.0,1.0
+WC-2014,2014,2014-06-22,Group G,United States,USA,Portugal,PRT,2,2,draw,0.5,0.5
+WC-2014,2014,2014-06-23,Group B,Australia,AUS,Spain,ESP,0,3,away team win,0.0,1.0
+WC-2014,2014,2014-06-23,Group B,Netherlands,NLD,Chile,CHL,2,0,home team win,1.0,0.0
+WC-2014,2014,2014-06-23,Group A,Cameroon,CMR,Brazil,BRA,1,4,away team win,0.0,1.0
+WC-2014,2014,2014-06-23,Group A,Croatia,HRV,Mexico,MEX,1,3,away team win,0.0,1.0
+WC-2014,2014,2014-06-24,Group D,Costa Rica,CRI,England,ENG,0,0,draw,0.5,0.5
+WC-2014,2014,2014-06-24,Group D,Italy,ITA,Uruguay,URY,0,1,away team win,0.0,1.0
+WC-2014,2014,2014-06-24,Group C,Japan,JPN,Colombia,COL,1,4,away team win,0.0,1.0
+WC-2014,2014,2014-06-24,Group C,Greece,GRC,Ivory Coast,CIV,2,1,home team win,1.0,0.0
+WC-2014,2014,2014-06-25,Group F,Bosnia and Herzegovina,BIH,Iran,IRN,3,1,home team win,1.0,0.0
+WC-2014,2014,2014-06-25,Group F,Nigeria,NGA,Argentina,ARG,2,3,away team win,0.0,1.0
+WC-2014,2014,2014-06-25,Group E,Honduras,HND,Switzerland,CHE,0,3,away team win,0.0,1.0
+WC-2014,2014,2014-06-25,Group E,Ecuador,ECU,France,FRA,0,0,draw,0.5,0.5
+WC-2014,2014,2014-06-26,Group G,Portugal,PRT,Ghana,GHA,2,1,home team win,1.0,0.0
+WC-2014,2014,2014-06-26,Group G,United States,USA,Germany,DEU,0,1,away team win,0.0,1.0
+WC-2014,2014,2014-06-26,Group H,Algeria,DZA,Russia,RUS,1,1,draw,0.5,0.5
+WC-2014,2014,2014-06-26,Group H,South Korea,KOR,Belgium,BEL,0,1,away team win,0.0,1.0
+WC-2018,2018,2018-06-14,Group A,Russia,RUS,Saudi Arabia,SAU,5,0,home team win,1.0,0.0
+WC-2018,2018,2018-06-15,Group A,Egypt,EGY,Uruguay,URY,0,1,away team win,0.0,1.0
+WC-2018,2018,2018-06-15,Group B,Morocco,MAR,Iran,IRN,0,1,away team win,0.0,1.0
+WC-2018,2018,2018-06-15,Group B,Portugal,PRT,Spain,ESP,3,3,draw,0.5,0.5
+WC-2018,2018,2018-06-16,Group C,France,FRA,Australia,AUS,2,1,home team win,1.0,0.0
+WC-2018,2018,2018-06-16,Group D,Argentina,ARG,Iceland,ISL,1,1,draw,0.5,0.5
+WC-2018,2018,2018-06-16,Group C,Peru,PER,Denmark,DNK,0,1,away team win,0.0,1.0
+WC-2018,2018,2018-06-16,Group D,Croatia,HRV,Nigeria,NGA,2,0,home team win,1.0,0.0
+WC-2018,2018,2018-06-17,Group E,Costa Rica,CRI,Serbia,SRB,0,1,away team win,0.0,1.0
+WC-2018,2018,2018-06-17,Group F,Germany,DEU,Mexico,MEX,0,1,away team win,0.0,1.0
+WC-2018,2018,2018-06-17,Group E,Brazil,BRA,Switzerland,CHE,1,1,draw,0.5,0.5
+WC-2018,2018,2018-06-18,Group F,Sweden,SWE,South Korea,KOR,1,0,home team win,1.0,0.0
+WC-2018,2018,2018-06-18,Group G,Belgium,BEL,Panama,PAN,3,0,home team win,1.0,0.0
+WC-2018,2018,2018-06-18,Group G,Tunisia,TUN,England,ENG,1,2,away team win,0.0,1.0
+WC-2018,2018,2018-06-19,Group H,Colombia,COL,Japan,JPN,1,2,away team win,0.0,1.0
+WC-2018,2018,2018-06-19,Group H,Poland,POL,Senegal,SEN,1,2,away team win,0.0,1.0
+WC-2018,2018,2018-06-19,Group A,Russia,RUS,Egypt,EGY,3,1,home team win,1.0,0.0
+WC-2018,2018,2018-06-20,Group B,Portugal,PRT,Morocco,MAR,1,0,home team win,1.0,0.0
+WC-2018,2018,2018-06-20,Group A,Uruguay,URY,Saudi Arabia,SAU,1,0,home team win,1.0,0.0
+WC-2018,2018,2018-06-20,Group B,Iran,IRN,Spain,ESP,0,1,away team win,0.0,1.0
+WC-2018,2018,2018-06-21,Group C,Denmark,DNK,Australia,AUS,1,1,draw,0.5,0.5
+WC-2018,2018,2018-06-21,Group C,France,FRA,Peru,PER,1,0,home team win,1.0,0.0
+WC-2018,2018,2018-06-21,Group D,Argentina,ARG,Croatia,HRV,0,3,away team win,0.0,1.0
+WC-2018,2018,2018-06-22,Group E,Brazil,BRA,Costa Rica,CRI,2,0,home team win,1.0,0.0
+WC-2018,2018,2018-06-22,Group D,Nigeria,NGA,Iceland,ISL,2,0,home team win,1.0,0.0
+WC-2018,2018,2018-06-22,Group E,Serbia,SRB,Switzerland,CHE,1,2,away team win,0.0,1.0
+WC-2018,2018,2018-06-23,Group G,Belgium,BEL,Tunisia,TUN,5,2,home team win,1.0,0.0
+WC-2018,2018,2018-06-23,Group F,South Korea,KOR,Mexico,MEX,1,2,away team win,0.0,1.0
+WC-2018,2018,2018-06-23,Group F,Germany,DEU,Sweden,SWE,2,1,home team win,1.0,0.0
+WC-2018,2018,2018-06-24,Group G,England,ENG,Panama,PAN,6,1,home team win,1.0,0.0
+WC-2018,2018,2018-06-24,Group H,Japan,JPN,Senegal,SEN,2,2,draw,0.5,0.5
+WC-2018,2018,2018-06-24,Group H,Poland,POL,Colombia,COL,0,3,away team win,0.0,1.0
+WC-2018,2018,2018-06-25,Group A,Saudi Arabia,SAU,Egypt,EGY,2,1,home team win,1.0,0.0
+WC-2018,2018,2018-06-25,Group A,Uruguay,URY,Russia,RUS,3,0,home team win,1.0,0.0
+WC-2018,2018,2018-06-25,Group B,Spain,ESP,Morocco,MAR,2,2,draw,0.5,0.5
+WC-2018,2018,2018-06-25,Group B,Iran,IRN,Portugal,PRT,1,1,draw,0.5,0.5
+WC-2018,2018,2018-06-26,Group C,Australia,AUS,Peru,PER,0,2,away team win,0.0,1.0
+WC-2018,2018,2018-06-26,Group C,Denmark,DNK,France,FRA,0,0,draw,0.5,0.5
+WC-2018,2018,2018-06-26,Group D,Iceland,ISL,Croatia,HRV,1,2,away team win,0.0,1.0
+WC-2018,2018,2018-06-26,Group D,Nigeria,NGA,Argentina,ARG,1,2,away team win,0.0,1.0
+WC-2018,2018,2018-06-27,Group F,South Korea,KOR,Germany,DEU,2,0,home team win,1.0,0.0
+WC-2018,2018,2018-06-27,Group F,Mexico,MEX,Sweden,SWE,0,3,away team win,0.0,1.0
+WC-2018,2018,2018-06-27,Group E,Serbia,SRB,Brazil,BRA,0,2,away team win,0.0,1.0
+WC-2018,2018,2018-06-27,Group E,Switzerland,CHE,Costa Rica,CRI,2,2,draw,0.5,0.5
+WC-2018,2018,2018-06-28,Group H,Japan,JPN,Poland,POL,0,1,away team win,0.0,1.0
+WC-2018,2018,2018-06-28,Group H,Senegal,SEN,Colombia,COL,0,1,away team win,0.0,1.0
+WC-2018,2018,2018-06-28,Group G,England,ENG,Belgium,BEL,0,1,away team win,0.0,1.0
+WC-2018,2018,2018-06-28,Group G,Panama,PAN,Tunisia,TUN,1,2,away team win,0.0,1.0
+WC-2022,2022,2022-11-20,Group A,Qatar,QAT,Ecuador,ECU,0,2,away team win,0.0,1.0
+WC-2022,2022,2022-11-21,Group B,England,ENG,Iran,IRN,6,2,home team win,1.0,0.0
+WC-2022,2022,2022-11-21,Group A,Senegal,SEN,Netherlands,NLD,0,2,away team win,0.0,1.0
+WC-2022,2022,2022-11-21,Group B,United States,USA,Wales,WAL,1,1,draw,0.5,0.5
+WC-2022,2022,2022-11-22,Group C,Argentina,ARG,Saudi Arabia,SAU,1,2,away team win,0.0,1.0
+WC-2022,2022,2022-11-22,Group D,Denmark,DNK,Tunisia,TUN,0,0,draw,0.5,0.5
+WC-2022,2022,2022-11-22,Group C,Mexico,MEX,Poland,POL,0,0,draw,0.5,0.5
+WC-2022,2022,2022-11-22,Group D,France,FRA,Australia,AUS,4,1,home team win,1.0,0.0
+WC-2022,2022,2022-11-23,Group F,Morocco,MAR,Croatia,HRV,0,0,draw,0.5,0.5
+WC-2022,2022,2022-11-23,Group E,Germany,DEU,Japan,JPN,1,2,away team win,0.0,1.0
+WC-2022,2022,2022-11-23,Group E,Spain,ESP,Costa Rica,CRI,7,0,home team win,1.0,0.0
+WC-2022,2022,2022-11-23,Group F,Belgium,BEL,Canada,CAN,1,0,home team win,1.0,0.0
+WC-2022,2022,2022-11-24,Group G,Switzerland,CHE,Cameroon,CMR,1,0,home team win,1.0,0.0
+WC-2022,2022,2022-11-24,Group H,Uruguay,URY,South Korea,KOR,0,0,draw,0.5,0.5
+WC-2022,2022,2022-11-24,Group H,Portugal,PRT,Ghana,GHA,3,2,home team win,1.0,0.0
+WC-2022,2022,2022-11-24,Group G,Brazil,BRA,Serbia,SRB,2,0,home team win,1.0,0.0
+WC-2022,2022,2022-11-25,Group B,Wales,WAL,Iran,IRN,0,2,away team win,0.0,1.0
+WC-2022,2022,2022-11-25,Group A,Qatar,QAT,Senegal,SEN,1,3,away team win,0.0,1.0
+WC-2022,2022,2022-11-25,Group A,Netherlands,NLD,Ecuador,ECU,1,1,draw,0.5,0.5
+WC-2022,2022,2022-11-25,Group B,England,ENG,United States,USA,0,0,draw,0.5,0.5
+WC-2022,2022,2022-11-26,Group D,Tunisia,TUN,Australia,AUS,0,1,away team win,0.0,1.0
+WC-2022,2022,2022-11-26,Group C,Poland,POL,Saudi Arabia,SAU,2,0,home team win,1.0,0.0
+WC-2022,2022,2022-11-26,Group D,France,FRA,Denmark,DNK,2,1,home team win,1.0,0.0
+WC-2022,2022,2022-11-26,Group C,Argentina,ARG,Mexico,MEX,2,0,home team win,1.0,0.0
+WC-2022,2022,2022-11-27,Group E,Japan,JPN,Costa Rica,CRI,0,1,away team win,0.0,1.0
+WC-2022,2022,2022-11-27,Group F,Belgium,BEL,Morocco,MAR,0,2,away team win,0.0,1.0
+WC-2022,2022,2022-11-27,Group F,Croatia,HRV,Canada,CAN,4,1,home team win,1.0,0.0
+WC-2022,2022,2022-11-27,Group E,Spain,ESP,Germany,DEU,1,1,draw,0.5,0.5
+WC-2022,2022,2022-11-28,Group G,Cameroon,CMR,Serbia,SRB,3,3,draw,0.5,0.5
+WC-2022,2022,2022-11-28,Group H,South Korea,KOR,Ghana,GHA,2,3,away team win,0.0,1.0
+WC-2022,2022,2022-11-28,Group G,Brazil,BRA,Switzerland,CHE,1,0,home team win,1.0,0.0
+WC-2022,2022,2022-11-28,Group H,Portugal,PRT,Uruguay,URY,2,0,home team win,1.0,0.0
+WC-2022,2022,2022-11-29,Group A,Ecuador,ECU,Senegal,SEN,1,2,away team win,0.0,1.0
+WC-2022,2022,2022-11-29,Group A,Netherlands,NLD,Qatar,QAT,2,0,home team win,1.0,0.0
+WC-2022,2022,2022-11-29,Group B,Iran,IRN,United States,USA,0,1,away team win,0.0,1.0
+WC-2022,2022,2022-11-29,Group B,Wales,WAL,England,ENG,0,3,away team win,0.0,1.0
+WC-2022,2022,2022-11-30,Group D,Australia,AUS,Denmark,DNK,1,0,home team win,1.0,0.0
+WC-2022,2022,2022-11-30,Group D,Tunisia,TUN,France,FRA,1,0,home team win,1.0,0.0
+WC-2022,2022,2022-11-30,Group C,Poland,POL,Argentina,ARG,0,2,away team win,0.0,1.0
+WC-2022,2022,2022-11-30,Group C,Saudi Arabia,SAU,Mexico,MEX,1,2,away team win,0.0,1.0
+WC-2022,2022,2022-12-01,Group F,Canada,CAN,Morocco,MAR,1,2,away team win,0.0,1.0
+WC-2022,2022,2022-12-01,Group F,Croatia,HRV,Belgium,BEL,0,0,draw,0.5,0.5
+WC-2022,2022,2022-12-01,Group E,Costa Rica,CRI,Germany,DEU,2,4,away team win,0.0,1.0
+WC-2022,2022,2022-12-01,Group E,Japan,JPN,Spain,ESP,2,1,home team win,1.0,0.0
+WC-2022,2022,2022-12-02,Group H,Ghana,GHA,Uruguay,URY,0,2,away team win,0.0,1.0
+WC-2022,2022,2022-12-02,Group H,South Korea,KOR,Portugal,PRT,2,1,home team win,1.0,0.0
+WC-2022,2022,2022-12-02,Group G,Cameroon,CMR,Brazil,BRA,1,0,home team win,1.0,0.0
+WC-2022,2022,2022-12-02,Group G,Serbia,SRB,Switzerland,CHE,2,3,away team win,0.0,1.0

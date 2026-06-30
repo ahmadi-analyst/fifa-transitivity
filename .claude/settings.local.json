@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "PowerShell(pip *)",
+      "WebSearch",
+      "WebFetch(domain:www.kaggle.com)"
+    ]
+  }
+}
